@@ -1,0 +1,253 @@
+/*https://fonts.google.com/specimen/Poppins#standard-styles هنا قمنا بعملية استيراد لجميع انواع الخط من موقع*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;/*نوع من انواع الخط*/
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;/*هذه الخاصية تُسهِّل تحديد أبعاد العناصر كثيرًا. */
+    scroll-behavior: smooth;/*تستخدم هذه الخاصية لجعل شريط التمرير اكثر نعومة وسلاسة*/
+}
+
+header{
+    background-color: beige;
+    width: 100%;
+    position: fixed;/*يبقى هذا العنصر ثابتا عند تمرير السكرول الى الاسفل*/
+    z-index: 999;/*يبقى هذا العنصر ظاهرا على الشاشة عند تمرير السكرول ومرور عناصر اخرى تحته*/
+    display: flex;
+    justify-content: space-between;/*على طرفي الصفحة وهناك مساحة بينهما navigation و logo يكون*/
+    align-items: center;
+    padding: 10px 200px;
+}
+.logo{
+    text-decoration: none;/*نزع الخط تحت الرابط*/
+    color: rgb(30, 30, 134);
+    font-size: 1.8em;/*1em = 16px*/
+    font-weight: 700;
+    text-transform: uppercase;/*جعل الحروف كبيرة*/
+}
+.navigation a{
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+    color: rgb(30, 30, 134);
+}
+.navigation a:hover{
+    color: rgb(196, 196, 240);
+}
+section{
+    padding: 100px 200px;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;/*100vh ان هذا الجزء يغطي الشاشة بهذه القيمة التي لا تقل عن  vh تعني */
+    display: flex;
+    align-items: center;
+    background: url(image/frontend.jpg) no-repeat;
+    background-size: cover;/*الصورة تغطي الصفحة*/
+    background-position: center;/*تاخذ الصورة المنتصف*/
+    background-attachment: fixed;/*من اجل ان تبقى الصورة الخلفية ثابتة عند تحريك السكرول*/
+}
+.main h2{
+    color: rgb(167, 161, 161);
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.main h2 span{
+    display: inline-block;/*margin لكي تعمل خاصية inline-block الى inline من span هنا حولنا عنصر*/
+    margin-top: 20px;
+    color:rgb(54, 54, 173) ;
+    font-size: 3em;
+    font-weight: 600;
+}
+.main h3{
+    color: rgb(167, 161, 161);
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.main-btn{
+    display: inline-block;
+    color: white;
+    background-color: rgb(54, 54, 173);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    padding: 0.9375em 2.1875em;
+    margin-bottom: 40px;
+    transition: 1.7s ease;
+}
+.main-btn:hover{
+    background-color:rgb(25, 25, 145) ;
+    transform: scale(1.1);/*تكبر 1.1 من حجمها*/
+}
+.social-icon a{
+    font-size: 1.7em;
+    color: rgb(156, 128, 128);
+    padding-right: 30px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color: rgb(54, 54, 129);
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    background-color: white;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgb(197, 188, 188);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card .icon{
+    color: rgb(91, 91, 158);
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color: rgb(66, 66, 134);
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.projects{
+    background-color: rgb(2, 2, 14);
+}
+.projects .content{
+    margin-top: 30px;
+}
+.project-card{
+    background-color: white;
+    border: 2px solid white;
+    min-height: 14em;
+    width: 23em;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.7s ease;
+}
+.project-card:hover{
+    transform: scale(1.1);
+}
+.project-img img:hover{
+    opacity: 0.7;
+}
+.project-img .img-2{
+    width: 50%;
+}
+.project-img img{
+    width: 100%;
+}
+.project-info{
+    padding: 1em;
+}
+.project-info p{
+    font-size: 0.8em;
+}
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.project-title a{
+    text-decoration: none;
+    color: rgb(63, 63, 122);
+}
+.project-title a:hover{
+    color: rgb(21, 21, 128);
+}
+.contact .icon{
+    font-size: 4.5em;
+}
+.contact .info h3{
+    color: black;
+}
+.contact .info p{
+    font-size: 1.5em;
+}
+footer{
+    background-color: rgb(2, 2, 14);
+    color: white;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-title{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.footer-title span{
+    color: rgb(61, 61, 128);
+}
+footer .social-icon a{
+    font-size: 2em;
+    padding-right: 12px;
+}
+@media (max-width:1023px){
+    header{
+        padding: 10px 15px;
+    }
+    .navigation a{
+        padding-left: 10px;
+    }
+    .title{
+        font-size: 1em;
+    }
+    section{
+        padding: 80px 20px;
+    }
+    .main h2{
+        font-size: 1em;
+    }
+    .main h3{
+        font-size: 1.5em;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+    .main h2{
+        font-size: 0.8em;
+    }
+    .main h3{
+        font-size: 1.4em;
+    }
+}
+@media (max-width:330px){
+    body{
+        font-size:8px;
+    }
+    .email{
+        margin-left: -10px;
+    }
+    
+}
+
